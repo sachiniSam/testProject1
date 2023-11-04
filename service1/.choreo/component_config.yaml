@@ -1,0 +1,14 @@
+apiVersion: core.choreo.dev/v1alpha1
+kind: ComponentConfig
+metadata:
+  name: service1
+  projectName: DemoProject
+  annotations:
+    componentType: service
+spec:
+  inbound:
+    - name: service1
+      port: 3000
+      type: REST
+      context: .
+      schemaFilePath: openapi.yaml
